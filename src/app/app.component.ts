@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ListManagerComponent } from './list-manager/list-manager.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `<app-list-manager></app-list-manager>`,
+  standalone: true,
+  imports: [ListManagerComponent],
 })
-export class AppComponent {
-  title = 'lab3';
-}
+export class AppComponent {}

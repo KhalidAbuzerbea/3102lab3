@@ -1,0 +1,20 @@
+<div class="container mt-3">
+  <h2>Shopping List</h2>
+  <div class="input-group mb-3">
+    <input
+      [(ngModel)]="newItem"
+      type="text"
+      class="form-control"
+      placeholder="Enter item name"
+    />
+    <button (click)="addItem()" class="btn btn-success">Add</button>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of shoppingList">
+      <app-list-item
+        [item]="item"
+        (removeItem)="removeItem($event)"
+      ></app-list-item>
+    </li>
+  </ul>
+</div>
